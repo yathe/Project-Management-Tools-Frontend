@@ -63,7 +63,7 @@ export const addTask = (taskName, userId,deadline) => async (dispatch) => {
     };
 
     try {
-        const response = await fetch('http://localhost:4000/task/add', {
+        const response = await fetch('https://project-taskbar-backend.netlify.app/task/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ export const getAllTasks = (token, id) => async (dispatch) => {
         console.log(token);
 
         // Construct the URL with query parameters
-        const url = new URL('http://localhost:4000/task/tasks');
+        const url = new URL('https://project-taskbar-backend.netlify.app/task/tasks');
         if (id) {
             url.searchParams.append('id', id);
         }
@@ -141,7 +141,7 @@ export const ArrowClick = (item, direction) => async (dispatch) => {
 
     try {
         // Make a request to the backend to update the task status
-        const response = await axios.put(`http://localhost:4000/task/${item._id}/status`, taskData);
+        const response = await axios.put(`https://project-taskbar-backend.netlify.app/task/${item._id}/status`, taskData);
 
         if (response.status === 200) {
             const updatedTask = response.data;
@@ -156,7 +156,7 @@ export const ArrowClick = (item, direction) => async (dispatch) => {
 };
 export const deleteItem = (id) => async (dispatch) => {
     try {
-        const response = await fetch(`http://localhost:4000/task/${id}`, {
+        const response = await fetch(`https://project-taskbar-backend.netlify.app/task/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
