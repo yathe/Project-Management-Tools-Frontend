@@ -45,7 +45,7 @@ export default authSlice.reducer;
 // Register function (not default)
 export const register = (user) => async (dispatch) => {
     try {
-        const response = await fetch('https://project-taskbar-backend.netlify.app/auth/register', {
+        const response = await fetch('https://project-management-tools-backend.onrender.com/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ export const signin = (user) => async (dispatch) => {
     console.log(user);
     try {
 
-        const response = await fetch('https://project-taskbar-backend.netlify.app/auth/signin', {
+        const response = await fetch('https://project-management-tools-backend.onrender.com/auth/signin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
