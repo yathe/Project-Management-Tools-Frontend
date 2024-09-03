@@ -1,0 +1,89 @@
+/* Container for the signup form */
+.signup-form {
+    position: fixed; /* Position the signup form relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    z-index: -1; /* Ensure the form background doesn't overlap the header */
+}
+
+/* Animation keyframes for the gradient background */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Wrapper to align the form items in the center */
+.signup-form__wrapper {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+/* Input field styling */
+.form-group 
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Placeholder styling */
+.form-group 
+input::placeholder {
+    color: #aaa;
+}
+
+/* Button styling */
+button {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Button hover effect */
+button:hover {
+   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Input and button focus effect */
+input:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}

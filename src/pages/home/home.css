@@ -1,0 +1,65 @@
+.home {
+    width: 100%;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, rgba(0, 255, 255, 0.6), rgba(247, 152, 247, 0.6), rgba(250, 159, 131, 0.6));
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+.home__container {
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home__container h3 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home__container p {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.home__container .button {
+    display: inline-block;
+    background: linear-gradient(145deg, rgba(247, 223, 227, 0.6), rgba(171, 129, 248, 0.6), rgba(253, 218, 104, 0.6));
+    color: black;
+    border: 2px solid black;
+    margin: 6px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.home__container .button:hover {
+    background: linear-gradient(145deg, rgba(171, 129, 248, 0.8), rgba(247, 223, 227, 0.8), rgba(253, 218, 104, 0.8));
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

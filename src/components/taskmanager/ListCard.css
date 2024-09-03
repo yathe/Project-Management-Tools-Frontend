@@ -1,0 +1,132 @@
+.list-card {
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-left: 1px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+
+.list-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.list-card__cell {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 5px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+.list-card__cell1 {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 1px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  color:black;
+}
+li.list-card__cell1 {
+  display: flex;
+}
+.list-card__cell:first-child,
+.list-card__cell:last-child {
+  flex: 0.5;
+}
+
+li.list-card__cell {
+    display: flex;
+}
+
+.list-card__actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Spacing between the buttons */
+}
+
+.action-button {
+  background: #5c6bc0;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.action-button:hover:enabled {
+  background: #3f51b5;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(6, 43, 11, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgb(46, 131, 57);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(1, 59, 9, 0.5);
+  }
+}
+
+.completed {
+  background-color: rgb(6, 253, 101);
+  color: white;
+  animation: glow 1.5s infinite;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.completed:hover .list-card__row {
+  transform: scale(1.05);
+}
+.trash{
+  background: linear-gradient(145deg, rgba(4, 150, 248, 0.7), rgba(252, 145, 4, 0.7)); 
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  color: rgb(253, 46, 46);
+  cursor: pointer;
+  padding: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trash:hover{
+  background: linear-gradient(45deg, rgb(250, 122, 201), rgb(55, 0, 255)); /* Intensify neon colors */
+  transform: translateY(-1px); /* More pronounced lift on hover */
+  box-shadow: 0 8px 12px rgba(0, 255, 255, 0.7); /* Stronger shadow on hover */
+  text-shadow: 0 0 15px rgba(255, 0, 150, 0.7), 0 0 25px rgba(255, 0, 150, 0.6), 0 0 35px rgba(255, 0, 150, 0.5); /* Brighter neon glow */
+}
+
+
